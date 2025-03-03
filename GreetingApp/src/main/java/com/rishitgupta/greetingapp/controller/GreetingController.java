@@ -1,6 +1,7 @@
 package com.rishitgupta.greetingapp.controller;
 
 
+import com.rishitgupta.greetingapp.DTO.Greeting;
 import com.rishitgupta.greetingapp.service.GreetingService;
 import org.springframework.web.bind.annotation.*;
 
@@ -23,8 +24,8 @@ public class GreetingController {
 
 
     @PostMapping
-    public String createGreeting() {
-        return greetingService.createGreeting();
+    public Greeting createGreeting(@RequestBody String message) {
+        return greetingService.saveGreeting(message);
     }
 
     @PutMapping
