@@ -5,6 +5,9 @@ import com.rishitgupta.greetingapp.DTO.Greeting;
 import com.rishitgupta.greetingapp.service.GreetingService;
 import org.springframework.web.bind.annotation.*;
 
+
+import java.util.Optional;
+
 @RestController
 @RequestMapping("/greeting")
 public class GreetingController {
@@ -24,8 +27,12 @@ public class GreetingController {
 
 
     @PostMapping
-    public Greeting createGreeting(@RequestBody String message) {
+    public Greeting createGreeting(@RequestParam String message) {
         return greetingService.saveGreeting(message);
+    }
+    @GetMapping("/{id}")
+    public Optional<Greeting> getGreetingById(@PathVariable Long id) {
+        return greetingService.getGreetingById(id);
     }
 
     @PutMapping
