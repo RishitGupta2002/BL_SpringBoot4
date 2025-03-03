@@ -5,6 +5,7 @@ import com.rishitgupta.greetingapp.DTO.Greeting;
 import com.rishitgupta.greetingapp.Repository.GreetingRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -32,13 +33,16 @@ public class GreetingService {
     public Optional<Greeting> getGreetingById(Long id) {
         return greetingRepository.findById(id);
     }
-
-    public String createGreeting() {
-        return "{\"message\": \"Greeting Created!\"}";
+    public List<Greeting> getAllGreetings() {
+        return greetingRepository.findAll();
     }
 
-    public String updateGreeting() {
-        return "{\"message\": \"Greeting Updated!\"}";
+
+    public Optional<Greeting> updateGreeting(Long id, String newMessage) {
+        return greetingRepository.findById(id).map(greeting -> {
+            greeting.setMessage(newMessage);
+            return greetingRepository.save(greeting);
+        });
     }
 
     public String deleteGreeting() {

@@ -5,8 +5,9 @@ import com.rishitgupta.greetingapp.DTO.Greeting;
 import com.rishitgupta.greetingapp.service.GreetingService;
 import org.springframework.web.bind.annotation.*;
 
-
+import java.util.List;
 import java.util.Optional;
+
 
 @RestController
 @RequestMapping("/greeting")
@@ -34,10 +35,14 @@ public class GreetingController {
     public Optional<Greeting> getGreetingById(@PathVariable Long id) {
         return greetingService.getGreetingById(id);
     }
+    @GetMapping("/all")
+    public List<Greeting> getAllGreetings() {
+        return greetingService.getAllGreetings();
+    }
 
-    @PutMapping
-    public String updateGreeting() {
-        return greetingService.updateGreeting();
+    @PutMapping("/{id}")
+    public Optional<Greeting> updateGreeting(@PathVariable Long id, @RequestParam String newMessage) {
+        return greetingService.updateGreeting(id, newMessage);
     }
 
     @DeleteMapping
