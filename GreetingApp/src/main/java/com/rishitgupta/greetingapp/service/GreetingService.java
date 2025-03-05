@@ -1,8 +1,13 @@
 package com.rishitgupta.greetingapp.service;
 
 
+<<<<<<< HEAD
 import com.rishitgupta.greetingapp.Repository.GreetingRepository;
 import com.rishitgupta.greetingapp.model.Greeting;
+=======
+import com.rishitgupta.greetingapp.model.Greeting;
+import com.rishitgupta.greetingapp.repository.GreetingRepository;
+>>>>>>> UC9
 
 import org.springframework.stereotype.Service;
 
