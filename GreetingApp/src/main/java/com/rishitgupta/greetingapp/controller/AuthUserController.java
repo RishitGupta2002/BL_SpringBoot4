@@ -1,6 +1,5 @@
 package com.rishitgupta.greetingapp.controller;
 
-
 import com.rishitgupta.greetingapp.dto.AuthUserDTO;
 import com.rishitgupta.greetingapp.service.AuthenticationService;
 import org.springframework.http.ResponseEntity;

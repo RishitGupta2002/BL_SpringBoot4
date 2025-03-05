@@ -1,6 +1,7 @@
 package com.rishitgupta.greetingapp.service;
 
 
+
 import com.rishitgupta.greetingapp.dto.AuthUserDTO;
 import com.rishitgupta.greetingapp.model.AuthUser;
 import com.rishitgupta.greetingapp.repository.AuthUserRepository;
