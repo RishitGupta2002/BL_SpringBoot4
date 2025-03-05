@@ -1,4 +1,4 @@
-package com.rishitgupta.greetingapp.DTO;
+package com.rishitgupta.greetingapp.model;
 
 
 import jakarta.persistence.*;
