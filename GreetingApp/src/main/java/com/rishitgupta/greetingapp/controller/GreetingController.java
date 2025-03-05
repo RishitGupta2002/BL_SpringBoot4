@@ -1,7 +1,7 @@
 package com.rishitgupta.greetingapp.controller;
 
 
-import com.rishitgupta.greetingapp.DTO.Greeting;
+import com.rishitgupta.greetingapp.model.Greeting;
 import com.rishitgupta.greetingapp.service.GreetingService;
 import org.springframework.web.bind.annotation.*;
 

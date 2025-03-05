@@ -1,8 +1,9 @@
 package com.rishitgupta.greetingapp.service;
 
 
-import com.rishitgupta.greetingapp.DTO.Greeting;
-import com.rishitgupta.greetingapp.Repository.GreetingRepository;
+import com.rishitgupta.greetingapp.model.Greeting;
+import com.rishitgupta.greetingapp.repository.GreetingRepository;
+
 import org.springframework.stereotype.Service;
 
 import java.util.List;

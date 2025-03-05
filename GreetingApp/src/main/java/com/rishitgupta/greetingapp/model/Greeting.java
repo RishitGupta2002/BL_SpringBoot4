@@ -1,9 +1,10 @@
-package com.rishitgupta.greetingapp.DTO;
+package com.rishitgupta.greetingapp.model;
 
 
 import jakarta.persistence.*;
 
 @Entity
+
 public class Greeting {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
